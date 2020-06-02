@@ -14,4 +14,13 @@ public class ControllerMain {
 	}
 
 
+
+	@RequestMapping(value="/starter02")
+	public String starter02() {
+
+		return "/starter02.html";
+	}
+
+
+
 }
