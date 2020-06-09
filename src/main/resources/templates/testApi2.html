@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>title</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}">
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
+
+  <!-- create CSS -->
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+  あああ
+  <html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="オンズ">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="robots" content="noindex,nofollow">
+    <title>オンズ</title>
+    <link rel="author" href="https://plus.google.com/100339792011720709315">
+    <link rel="publisher" href="https://plus.google.com/114535043704289749159">
+    <link rel="icon" href="/icon/favicon.ico">
+    <link rel="stylesheet" href="../inc/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery.datetimepicker.css">
+    <script
+      src="https://partner.googleadservices.com/gampad/cookie.js?domain=on-ze.com&amp;callback=_gfp_s_&amp;client=ca-pub-8278675107749753&amp;cookie=ID%3Df80a5bfc7d66285c%3AT%3D1591335223%3AS%3DALNI_Ma9NmINtyKwdMBPsr_KWVDi7yJ4Vg&amp;crv=1"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/r20200602/r20190131/show_ads_impl.js"
+      id="google_shimpl"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="../inc/jquery.js"></script>
+    <script src="jquery.datetimepicker.js"></script>
+    <script>
+      $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker({ datepicker: false });
+        $('#datetimepicker3').datetimepicker({ timepicker: false });
+      });
+    </script>
+    <link rel="preload" href="https://adservice.google.co.jp/adsid/integrator.js?domain=on-ze.com" as="script">
+    <script type="text/javascript" src="https://adservice.google.co.jp/adsid/integrator.js?domain=on-ze.com"></script>
+    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=on-ze.com" as="script">
+    <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=on-ze.com"></script>
+  </head>
+
+  <body style="">
+    <div id="to"></div>
+    <div class="site">
+      <header id="header" class="site-header" role="banner">
+        <div class="inner">
+          <h1><a href="http://on-ze.com">ONZE</a></h1>
+          <h2>オンズ：サンプル集</h2>
+        </div>
+      </header>
+      <div id="main" class="site-main">
+
+
+        <div id="demo">
+          <div class="inner">
+
+            <h2>【jQuery】日付と時間を直感的に選択できる［DateTimePicker］のサンプルです。</h2>
+
+            <fieldset class="fieldset">
+              <label>デフォルト</label>
+              <input id="datetimepicker1" type="text">
+            </fieldset>
+
+            <fieldset class="fieldset">
+              <label>時間だけ表示</label>
+              <input id="datetimepicker2" type="text">
+            </fieldset>
+
+
+            <fieldset class="fieldset">
+              <label>日付だけ表示</label>
+              <input id="datetimepicker3" type="text">
+            </fieldset>
+
+          </div>
+        </div>
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+    <!-- Bootstrap 4 -->
+    <script th:src="@{plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <!-- AdminLTE App -->
+    <script th:src="@{dist/js/adminlte.min.js}"></script>
+
+  </body>
+
+  </html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>title</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}">
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
+
+  <!-- DateTimePicker style -->
+  <link rel="stylesheet" th:href="@{/datetimepicker/css/tempusdominus-bootstrap-4.css}">
+
+  <!-- create CSS -->
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+  あああ
+
+  <hr color="RED">
+  <!-- チートシートで表示 -->
+
+  <hr color="RED">
+  <!-- テキスト -->
+  <p th:text="*{aaa}"></p>
+  <p th:text="${aaa}"></p>
+
+  <hr color="RED">
+  <!-- List -->
+  <p th:text="*{bbb}"></p>
+  <p th:text="*{bbb[0]}"></p>
+  <ul>
+    <li th:each="element : *{bbb}" th:text="*{bbb}"></li>
+  </ul>
+  <ul>
+    <li th:each="element : *{bbb}" th:text="*{element}"></li>
+  </ul>
+  <ul>
+    <li th:each="str : *{bbb}" th:text="*{str}"></li>
+  </ul>
+  <ul>
+    <li th:each="element : *{bbb}">[[*{element}]]</li>
+  </ul>
+
+  <hr color="RED">
+  <!-- Map -->
+  <p th:text="*{ccc}"></p>
+  <p th:text="*{ccc.key1}"></p>
+  <ul>
+    <li th:each="element : *{ccc}" th:text="*{ccc}"></li>
+  </ul>
+  <ul>
+    <li th:each="element : *{ccc}" th:text="*{element.key}"></li>
+  </ul>
+  <ul>
+    <li th:each="element : *{ccc}" th:text="*{element.value}"></li>
+  </ul>
+
+
+  <hr color="RED">
+  <!-- 属性設定 -->
+  <p th:class="*{ccc.key1}">
+    <font th:size="*{ccc.key5}">
+      aaaaaa
+    </font>
+  </p>
+
+  <hr color="RED">
+  <!-- 他 -->
+  <p th:text="${#httpServletRequest}"></p>
+  <hr>
+  <p th:text="${#httpSession}"></p>
+  <hr>
+  <p th:text="${param}"></p>
+  <hr>
+  <p th:text="${session}"></p>
+  <hr>
+  <p th:text="${application}"></p>
+
+
+
+  <hr color="RED">
+  <!-- If文 -->
+  <p th:if="*{ddd.key1}" th:text="*{ddd.key1}"></p>
+  <p th:if="*{ddd.key2}" th:text="*{ddd.key2}"></p>
+
+  <hr color="RED">
+  <!-- 下に出るボタン bootstrap 4 -->
+
+  <div class="dropdown">
+    <!-- 切替ボタンの設定 -->
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      ドロップダウンボタン
+    </button>
+
+    <!-- ドロップメニューの設定 -->
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">メニュー1</a>
+      <a class="dropdown-item" href="#">メニュー2</a>
+      <a class="dropdown-item" href="#">メニュー3</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">その他リンク</a>
+    </div><!-- /.dropdown-menu -->
+  </div><!-- /.dropdown -->
+
+
+  <hr color="RED">
+  <!-- DateTimePicker -->
+  <div>
+    <!-- <p><input type="text" id="picker1"></p> -->
+
+<div class="input-group date" id="picker1" data-target-input="nearest">
+  <input type="text" class="form-control datetimepicker-input" data-target="#picker1"/>
+  <div class="input-group-append" data-target="#picker1" data-toggle="datetimepicker">
+    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+  <!-- Bootstrap 4 -->
+  <script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <!-- AdminLTE App -->
+  <script th:src="@{/dist/js/adminlte.min.js}"></script>
+
+  <!-- DateTimePicker App -->
+  <script th:src="@{/datetimepicker/js/tempusdominus-bootstrap-4.js}"></script>
+
+
+    <script>
+      // $(function () {
+      //   $('#picker1').datetimepicker();
+      // });
+      $('#picker1-demo').datetimepicker();
+
+    </script>
+
+
+
+
+</body>
+</html>
