@@ -15,7 +15,10 @@
   <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
 
   <!-- DateTimePicker style -->
-  <link rel="stylesheet" th:href="@{/datetimepicker/css/tempusdominus-bootstrap-4.css}">
+  <!-- <link rel="stylesheet" th:href="@{/datetimepicker/css/tempusdominus-bootstrap-4.css}"> -->
+
+  <!-- DataTables style -->
+  <link rel="stylesheet" type="text/css" th:href="@{/DataTables/datatables.min.css}" />
 
   <!-- create CSS -->
   <link rel="stylesheet" th:href="@{/css/main.css}">
@@ -117,18 +120,130 @@
   <div>
     <!-- <p><input type="text" id="picker1"></p> -->
 
-<div class="input-group date" id="picker1" data-target-input="nearest">
+<!-- <div class="input-group date" id="picker1" data-target-input="nearest">
   <input type="text" class="form-control datetimepicker-input" data-target="#picker1"/>
   <div class="input-group-append" data-target="#picker1" data-toggle="datetimepicker">
     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
   </div>
-</div>
-
-
-
+</div> -->
 
 
   </div>
+
+  <hr color="RED">
+  <!-- Datatables ＆ チェックボックス -->
+  <!-- 課題：次ページ以降への全選択が機能しない。 -->
+
+  <div>
+    <table id="myTable" border="1">
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="allCheck">c-box</th>
+          <th>Header1</th>
+          <th>Header2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>aaa</td>
+          <td>bbb</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget"></td>
+          <td>ccc</td>
+          <td>ddd</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="checkTarget" checked></td>
+          <td>eee</td>
+          <td>fff</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
 
   <br>
   <br>
@@ -168,16 +283,44 @@
   <script th:src="@{/dist/js/adminlte.min.js}"></script>
 
   <!-- DateTimePicker App -->
-  <script th:src="@{/datetimepicker/js/tempusdominus-bootstrap-4.js}"></script>
-
+  <!-- <script th:src="@{/datetimepicker/js/tempusdominus-bootstrap-4.js}"></script> -->
 
     <script>
       // $(function () {
       //   $('#picker1').datetimepicker();
       // });
-      $('#picker1-demo').datetimepicker();
+      // $('#picker1-demo').datetimepicker();
 
     </script>
+
+    <!-- DataTables js -->
+    <script type="text/javascript" th:src="@{/DataTables/datatables.min.js}"></script>
+
+    <!-- DataTables script -->
+    <script>
+      $(document).ready(function () {
+        $('#myTable').DataTable();
+      });
+
+
+      $(function () {
+        var checkFlg = false;
+        $("#allCheck").on("click", function () {
+          if (checkFlg) {
+            $(".checkTarget").prop('checked', false);
+            checkFlg = false;
+          } else {
+            $(".checkTarget").prop('checked', true);
+            checkFlg = true;
+          }
+        });
+
+      });
+    </script>
+
+
+
+
 
 
 
