@@ -6,6 +6,8 @@ import java.util.HashMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ControllerMain {
@@ -23,6 +25,32 @@ public class ControllerMain {
 
         return "/starter02.html";
     }
+
+    @RequestMapping(value = "/testGetPost", method = RequestMethod.POST)
+    public String testPost(Model model,
+            @RequestParam(name = "id", defaultValue = "") String jiyuu01) {
+        model.addAttribute("method", "POST");
+
+
+
+        model.addAttribute("id", jiyuu01);
+
+        return "testGetPost";
+    }
+
+    @RequestMapping(value = "/testGetPost", method = RequestMethod.GET)
+    public String testGet(Model model,
+        @RequestParam(name = "id", defaultValue = "") String jiyuu01) {
+        model.addAttribute("method", "GET");
+
+        model.addAttribute("id", jiyuu01);
+
+        return "testGetPost";
+    }
+
+
+
+
 
     @RequestMapping(value = "/testApi")
     public String testApi(Model model) {
@@ -51,6 +79,9 @@ public class ControllerMain {
         mapData.put("ddd", mapData3);
 
         model.addAllAttributes(mapData);
+
+
+
 
         return "/testApi.html";
     }

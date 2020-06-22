@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>testGetPost</title>
+</head>
+<body>
+
+<h1>[[${method}]]</h1>
+<hr>
+<p>
+data:<span th:text="*{id}"></span>
+</p>
+
+<hr color="RED">
+
+<form action="./testGetPost" method="get">
+
+  <input type="text" name="id" th:value="*{id}">
+
+
+
+<input type="submit" value="GET">
+</form>
+
+<form action="./testGetPost" method="post">
+
+  <input type="text" name="id" th:value="*{id}">
+
+
+
+
+<input type="submit" value="POST">
+</form>
+
+
+</body>
+</html>
